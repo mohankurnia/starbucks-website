@@ -1,0 +1,36 @@
+.navbar {
+    background-color: $color-primary;
+    grid-column: full-start / full-end;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__logo {
+        width: 6.4rem;
+        height: 6.4rem;
+    }
+
+    &__search {
+        flex: 0 0 0 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--input {
+            width: 15rem;
+            height: 4rem;
+            margin-right: -3.25rem;
+        }
+
+        &--button {
+            border: none;
+            background-color: #fff;
+        }
+
+        &--icon {
+            height: 1.8rem;
+            width: 1.8rem;
+        }
+    }
+}
