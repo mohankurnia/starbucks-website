@@ -2,6 +2,8 @@
 $color-primary: #117050;
 $color-primary-dark: #006341;
 
+$color-secondary: #b3b3b3;
+
 $color-grey-light: #333333;
 $color-grey-dark: #111111;
 
@@ -31,6 +33,6 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: 8rem repeat(2, min-content) 20rem;
+    grid-template-rows: 11rem repeat(2, min-content) 20rem;
     grid-template-columns: [full-start] minmax(6rem, 1fr) minmax(6rem, 1fr) [full-end];
 }
