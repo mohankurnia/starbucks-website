@@ -6,7 +6,7 @@
     grid-template-columns: [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end];
     justify-content: center;
 
-    .search {
+    &__search {
         grid-column: 6 / span 2;
         justify-self: center;
         align-self: center;
@@ -21,63 +21,63 @@
         height: 6.4rem;
     }
 
-    &__search {
+    &__form {
         flex: 0 0 0 40%;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
 
-        &--input {
-            width: 26rem;
-            height: 4rem;
-            font-family: inherit;
-            border: 1px solid $color-secondary;
-            padding: .7rem 2rem;
-            border-radius: 0;
-            margin-right: -3.25rem;
+    &__input {
+        width: 26rem;
+        height: 4rem;
+        font-family: inherit;
+        border: 1px solid $color-secondary;
+        padding: .7rem 2rem;
+        border-radius: 0;
+        margin-right: -3.25rem;
 
-            &:focus {
-                outline: none;
-            }
+        &:focus {
+            outline: none;
         }
+    }
 
-        &--button {
-            border: none;
-            background-color: #fff;
-        }
+    &__button {
+        border: none;
+        background-color: #fff;
+    }
 
-        &--icon {
-            height: 2.2rem;
-            width: 2.2rem;
-            cursor: pointer;
-        }
+    &__icon {
+        height: 2.2rem;
+        width: 2.2rem;
+        cursor: pointer;
+    }
 
-        &--navbtn {
-            border: none;
-            border-radius: 0;
+    &__navbtn {
+        border: none;
+        border-radius: 0;
+        background-color: $color-grey-dark;
+        height: 2.4px;
+        width: 2.4rem;
+        margin-left: 5rem;
+        cursor: pointer;
+
+        &::before,
+        &:after {
             background-color: $color-grey-dark;
             height: 2.4px;
             width: 2.4rem;
-            margin-left: 5rem;
-            cursor: pointer;
-
-            &::before,
-            &:after {
-                background-color: $color-grey-dark;
-                height: 2.4px;
-                width: 2.4rem;
-                content: "";
-                display: block;
-            }
-
-            &:before { transform: translateY(-.8rem); }
-            &:after { transform: translateY(.5rem); }
+            content: "";
+            display: block;
         }
 
-        &--btn {
-            grid-column: 8 / -1;
-            justify-self: start;
-            align-self: center;
-        }
+        &:before { transform: translateY(-.8rem); }
+        &:after { transform: translateY(.5rem); }
+    }
+
+    &__btn {
+        grid-column: 8 / -1;
+        justify-self: start;
+        align-self: center;
     }
 }

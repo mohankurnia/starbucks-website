@@ -1,4 +1,35 @@
 .header {
-    background-color: lightskyblue;
     grid-column: full-start / full-end;
+    background-image: url(../img/hero.jpeg);
+    background-size: cover;
+    background-position: 50% 30%;
+    padding: 8rem;
+
+    display: grid;
+    grid-template-rows: 1fr min-content minmax(6rem, min-content);
+    grid-template-columns: minmax(min-content, max-content);
+    grid-row-gap: 3rem;
+
+    & > * {
+        margin-left: 15rem;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+
+    &__products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 3rem;
+        margin-top: 2rem;
+
+        img {
+            max-height: 16rem;
+            max-width: 100%;
+            border: 5px solid $color-primary;
+            border-radius: 100%;
+        }
+    }
 }
