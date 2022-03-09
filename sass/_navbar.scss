@@ -1,19 +1,23 @@
 .navbar {
-    // background-color: $color-primary;
     border-top: 10px solid $color-primary;
     grid-column: full-start / full-end;
 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end];
+    justify-content: center;
 
     .search {
-        display: flex;
-        align-items: center;
+        grid-column: 6 / span 2;
+        justify-self: center;
+        align-self: center;
+    }
+
+    &__link {
+        justify-self: center;
+        align-self: center;
     }
 
     &__logo {
-        width: 6.4rem;
         height: 6.4rem;
     }
 
@@ -31,6 +35,10 @@
             padding: .7rem 2rem;
             border-radius: 0;
             margin-right: -3.25rem;
+
+            &:focus {
+                outline: none;
+            }
         }
 
         &--button {
@@ -41,6 +49,7 @@
         &--icon {
             height: 2.2rem;
             width: 2.2rem;
+            cursor: pointer;
         }
 
         &--navbtn {
@@ -63,6 +72,12 @@
 
             &:before { transform: translateY(-.8rem); }
             &:after { transform: translateY(.5rem); }
+        }
+
+        &--btn {
+            grid-column: 8 / -1;
+            justify-self: start;
+            align-self: center;
         }
     }
 }
