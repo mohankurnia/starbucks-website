@@ -1,0 +1,130 @@
+.galleries {
+    grid-column: full-start / full-end;
+
+    display: grid;
+    grid-template-rows: repeat(6, min-content);
+}
+
+.gallery {
+    display: grid;
+    position: relative;
+    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: repeat(2, 50vw);
+    
+    &--1 {
+        grid-row: 1 / 2;
+    }
+
+    &--2 {
+        grid-row: 2 / 3;
+    }
+
+    &--3 {
+        grid-row: 3 / 4;
+    }
+
+    &--4 {
+        grid-row: 4 / 5;
+        background-color: #E8E9EE;
+    }
+
+    &--5 {
+        grid-row: 5 / 6;
+        height: 50rem;
+        overflow: hidden;
+        background-color: #E8E9EE;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-rows: repeat(5, min-content);
+        grid-row-gap: 2rem;
+        padding: 5rem 15rem;
+        align-content: center;
+    }
+
+    &__quote,
+    &__text {
+        font-size: 1.6rem;
+        font-family: $font-primary;
+        line-height: 1.6;
+        font-weight: 400;
+    }
+
+    &__quote {
+        font-style: italic;
+    }
+
+    &__img--1 {
+        background-image: url(../img/starbucks-1.jpeg);
+        background-size: cover;
+        min-height: 34.7rem;
+        background-position: 50% 50%;
+        grid-row: 2 / -1;
+        grid-column: 1 / 2;
+        // max-width: 100%;
+        // margin-top: -5rem;
+    }
+    
+    &__img--2 {
+        grid-row: 1 / -1;
+        grid-column: 2 / -1;
+        max-width: 100%;
+        // min-height: 89.2rem;
+    }
+    
+    &__img--3 {
+        grid-row: 1 / -1;
+        max-width: 100%;
+    }
+
+    &__img--4 {
+        background-image: url(../img/starbucks-4.jpeg);
+        background-size: cover;
+        background-position: 50% 50%;
+        grid-row: 2 / -1;
+        max-width: 100%;
+        margin-top: -5rem;
+    }
+
+    &__img--7 {
+        height: 50rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__img--logo {
+        position: absolute;
+        width: 50rem;
+        bottom: -18rem;
+        left: -8rem;
+        z-index: -1;
+        opacity: .2;
+    }
+}
+
+.green-box {
+    width: 16rem;
+    height: 2rem;
+    background-color: $color-primary-dark;
+}
+
+.btn {
+    background-color: transparent;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    font-family: $font-primary;
+    border: 2px solid $color-secondary-dark;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-secondary-dark;
+        color: #fff;
+    }
+}

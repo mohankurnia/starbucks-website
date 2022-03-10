@@ -1,4 +1,21 @@
 .footer {
-    background-color: brown;
+    background-color: $color-grey-light;
     grid-column: 1 / -1;
+    display: grid;
+
+    p {
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #fff;
+        justify-self: center;
+        align-self: center;
+
+        a {
+            color: #fff;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
 }
