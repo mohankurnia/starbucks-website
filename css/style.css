@@ -78,7 +78,7 @@ body {
   .navbar__navbtn, .navbar__closebtn {
     position: relative;
     margin-bottom: .2rem;
-    margin-left: 2rem; }
+    margin-left: 5rem; }
     .navbar__navbtn, .navbar__navbtn::before, .navbar__navbtn::after, .navbar__closebtn, .navbar__closebtn::before, .navbar__closebtn::after {
       width: 2.4rem;
       height: 2.4px;
