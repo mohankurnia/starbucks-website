@@ -9,7 +9,7 @@
     display: grid;
     position: relative;
     grid-template-rows: repeat(3, min-content);
-    grid-template-columns: repeat(2, 50vw);
+    grid-template-columns: repeat(2, 1fr);
     
     &--1 {
         grid-row: 1 / 2;
@@ -17,22 +17,43 @@
 
     &--2 {
         grid-row: 2 / 3;
+
+        .gallery__content {
+            padding: 5rem 16rem;
+
+            .btn {
+                margin-top: 1rem;
+            }
+        }
     }
 
     &--3 {
         grid-row: 3 / 4;
+
+        .gallery__content {
+            height: 77rem;
+        }
     }
 
     &--4 {
         grid-row: 4 / 5;
         background-color: #E8E9EE;
+        background-image: url(../img/starbucks-6.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 120% center;
+
+        .gallery__content {
+            height: 77rem;
+            padding: 5rem 22rem;
+        }
     }
 
     &--5 {
         grid-row: 5 / 6;
-        height: 50rem;
-        overflow: hidden;
         background-color: #E8E9EE;
+        height: 40rem;
+        overflow: hidden;
     }
 
     &__content {
@@ -56,35 +77,52 @@
     }
 
     &__img--1 {
+        grid-row: 2 / -1;
+        grid-column: 1 / 2;
         background-image: url(../img/starbucks-1.jpeg);
         background-size: cover;
         min-height: 34.7rem;
         background-position: 50% 50%;
-        grid-row: 2 / -1;
-        grid-column: 1 / 2;
-        // max-width: 100%;
-        // margin-top: -5rem;
     }
     
     &__img--2 {
         grid-row: 1 / -1;
         grid-column: 2 / -1;
-        max-width: 100%;
-        // min-height: 89.2rem;
+        background-image: url(../img/starbucks-2.jpeg);
+        background-size: cover;
+        background-position: 70% 50%;
     }
     
     &__img--3 {
         grid-row: 1 / -1;
-        max-width: 100%;
+        grid-column: 1 / 2;
+        background-image: url(../img/starbucks-3.jpeg);
+        background-size: cover;
+        background-position: 50% 50%;
     }
 
     &__img--4 {
+        grid-row: 2 / -1;
+        grid-column: 2 / -1;
         background-image: url(../img/starbucks-4.jpeg);
         background-size: cover;
+        min-height: 45.3rem;
         background-position: 50% 50%;
-        grid-row: 2 / -1;
-        max-width: 100%;
-        margin-top: -5rem;
+    }
+
+    &__img--5 {
+        grid-row: 1 / -1;
+        grid-column: 2 / -1;
+        background-image: url(../img/starbucks-5.jpeg);
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+    &__img--6 {
+        background-image: url(../img/starbucks-6.jpeg);
+        background-size: cover;
+        background-position: 70% 50%;
+        height: 77rem;
     }
 
     &__img--7 {

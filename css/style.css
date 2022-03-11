@@ -69,28 +69,72 @@ body {
     height: 2.2rem;
     width: 2.2rem;
     cursor: pointer; }
-  .navbar__navbtn {
-    border: none;
-    border-radius: 0;
-    background-color: #111111;
-    height: 2.4px;
-    width: 2.4rem;
-    margin-left: 5rem;
-    cursor: pointer; }
-    .navbar__navbtn::before, .navbar__navbtn:after {
-      background-color: #111111;
-      height: 2.4px;
-      width: 2.4rem;
-      content: "";
-      display: block; }
-    .navbar__navbtn:before {
-      transform: translateY(-0.8rem); }
-    .navbar__navbtn:after {
-      transform: translateY(0.5rem); }
+  .navbar__checkbox {
+    display: none; }
   .navbar__btn {
     grid-column: 8 / -1;
     justify-self: start;
     align-self: center; }
+  .navbar__navbtn, .navbar__closebtn {
+    position: relative;
+    margin-bottom: .2rem;
+    margin-left: 2rem; }
+    .navbar__navbtn, .navbar__navbtn::before, .navbar__navbtn::after, .navbar__closebtn, .navbar__closebtn::before, .navbar__closebtn::after {
+      width: 2.4rem;
+      height: 2.4px;
+      background-color: #111111;
+      display: inline-block; }
+    .navbar__navbtn::before, .navbar__navbtn::after, .navbar__closebtn::before, .navbar__closebtn::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s; }
+    .navbar__navbtn::before, .navbar__closebtn::before {
+      top: .2rem; }
+    .navbar__navbtn::after, .navbar__closebtn::after {
+      top: .2rem; }
+  .navbar__navbtn:before {
+    transform: translateY(-0.8rem); }
+  .navbar__navbtn:after {
+    transform: translateY(0.5rem); }
+  .navbar__closebtn {
+    background-color: transparent;
+    border: none;
+    margin: 3rem 3rem 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: right; }
+    .navbar__closebtn::before, .navbar__closebtn::after {
+      background-color: #fff;
+      width: 3rem; }
+    .navbar__closebtn:before {
+      transform: rotate(45deg); }
+    .navbar__closebtn:after {
+      transform: rotate(-45deg); }
+  .navbar__background {
+    height: 100vh;
+    width: 15vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111111;
+    z-index: 1000;
+    opacity: 0; }
+  .navbar__item {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem; }
+  .navbar__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: inherit;
+    font-family: "Open Sans", sans-serif; }
+  .navbar__checkbox:checked ~ .navbar__background {
+    opacity: 1; }
+  .navbar__checkbox:checked ~ .navbar__nav {
+    opacity: 1;
+    width: 100%; }
 
 .header {
   grid-column: full-start / full-end;
@@ -127,21 +171,34 @@ body {
   display: grid;
   position: relative;
   grid-template-rows: repeat(3, min-content);
-  grid-template-columns: repeat(2, 50vw); }
+  grid-template-columns: repeat(2, 1fr); }
   .gallery--1 {
     grid-row: 1 / 2; }
   .gallery--2 {
     grid-row: 2 / 3; }
+    .gallery--2 .gallery__content {
+      padding: 5rem 16rem; }
+      .gallery--2 .gallery__content .btn {
+        margin-top: 1rem; }
   .gallery--3 {
     grid-row: 3 / 4; }
+    .gallery--3 .gallery__content {
+      height: 77rem; }
   .gallery--4 {
     grid-row: 4 / 5;
-    background-color: #E8E9EE; }
+    background-color: #E8E9EE;
+    background-image: url(../img/starbucks-6.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 120% center; }
+    .gallery--4 .gallery__content {
+      height: 77rem;
+      padding: 5rem 22rem; }
   .gallery--5 {
     grid-row: 5 / 6;
-    height: 50rem;
-    overflow: hidden;
-    background-color: #E8E9EE; }
+    background-color: #E8E9EE;
+    height: 40rem;
+    overflow: hidden; }
   .gallery__content {
     display: grid;
     grid-template-rows: repeat(5, min-content);
@@ -156,26 +213,42 @@ body {
   .gallery__quote {
     font-style: italic; }
   .gallery__img--1 {
+    grid-row: 2 / -1;
+    grid-column: 1 / 2;
     background-image: url(../img/starbucks-1.jpeg);
     background-size: cover;
     min-height: 34.7rem;
-    background-position: 50% 50%;
-    grid-row: 2 / -1;
-    grid-column: 1 / 2; }
+    background-position: 50% 50%; }
   .gallery__img--2 {
     grid-row: 1 / -1;
     grid-column: 2 / -1;
-    max-width: 100%; }
+    background-image: url(../img/starbucks-2.jpeg);
+    background-size: cover;
+    background-position: 70% 50%; }
   .gallery__img--3 {
     grid-row: 1 / -1;
-    max-width: 100%; }
+    grid-column: 1 / 2;
+    background-image: url(../img/starbucks-3.jpeg);
+    background-size: cover;
+    background-position: 50% 50%; }
   .gallery__img--4 {
+    grid-row: 2 / -1;
+    grid-column: 2 / -1;
     background-image: url(../img/starbucks-4.jpeg);
     background-size: cover;
-    background-position: 50% 50%;
-    grid-row: 2 / -1;
-    max-width: 100%;
-    margin-top: -5rem; }
+    min-height: 45.3rem;
+    background-position: 50% 50%; }
+  .gallery__img--5 {
+    grid-row: 1 / -1;
+    grid-column: 2 / -1;
+    background-image: url(../img/starbucks-5.jpeg);
+    background-size: cover;
+    background-position: 50% 50%; }
+  .gallery__img--6 {
+    background-image: url(../img/starbucks-6.jpeg);
+    background-size: cover;
+    background-position: 70% 50%;
+    height: 77rem; }
   .gallery__img--7 {
     height: 50rem;
     position: absolute;
@@ -221,6 +294,7 @@ body {
     justify-self: center;
     align-self: center; }
     .footer p a {
-      color: #fff; }
+      color: #a8f8dd; }
       .footer p a:hover {
+        color: #fff;
         text-decoration: none; }
