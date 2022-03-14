@@ -126,8 +126,7 @@
         top: 0;
         left: 0;
         z-index: 500;
-        visibility: hidden;
-        transition: all .2s; 
+        visibility: hidden; 
 
         @supports (-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
             -webkit-backdrop-filter: blur(2px);
@@ -144,8 +143,7 @@
         left: 0;
         background-color: $color-grey-dark;
         z-index: 1000;
-        visibility: hidden;    
-        transition: all .3s;
+        visibility: hidden;  
     }
 
     &__item {

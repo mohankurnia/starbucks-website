@@ -119,8 +119,7 @@ body {
     top: 0;
     left: 0;
     z-index: 500;
-    visibility: hidden;
-    transition: all .2s; }
+    visibility: hidden; }
     @supports (-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
       .navbar__shadow {
         -webkit-backdrop-filter: blur(2px);
@@ -134,8 +133,7 @@ body {
     left: 0;
     background-color: #111111;
     z-index: 1000;
-    visibility: hidden;
-    transition: all .3s; }
+    visibility: hidden; }
   .navbar__item {
     display: flex;
     justify-content: center;
