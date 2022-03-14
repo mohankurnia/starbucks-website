@@ -61,6 +61,7 @@
         grid-column: 8 / -1;
         justify-self: start;
         align-self: center;
+        cursor: pointer;
     }
 
     &__navbtn,
@@ -118,6 +119,20 @@
         }
     }
 
+    &__shadow {
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 500;
+        visibility: hidden;
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
+        background-color: rgba(#000, .5);
+        transition: all .2s; 
+    }
+
     &__background {
         height: 100vh;
         width: 15vw;
@@ -126,7 +141,8 @@
         left: 0;
         background-color: $color-grey-dark;
         z-index: 1000;
-        opacity: 0;
+        visibility: hidden;    
+        transition: all .3s;
     }
 
     &__item {
@@ -143,8 +159,9 @@
         font-family: $font-primary;
     }
 
+    &__checkbox:checked ~ &__shadow,
     &__checkbox:checked ~ &__background {
-        opacity: 1;
+        visibility: visible;
     }
 
     &__checkbox:checked ~ &__nav {
