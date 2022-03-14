@@ -37,7 +37,7 @@
 
     &--4 {
         grid-row: 4 / 5;
-        background-color: #E8E9EE;
+        background-color: $color-secondary-light;
         background-image: url(../img/starbucks-6.jpeg);
         background-size: contain;
         background-repeat: no-repeat;
@@ -51,7 +51,7 @@
 
     &--5 {
         grid-row: 5 / 6;
-        background-color: #E8E9EE;
+        background-color: $color-secondary-light;
         height: 40rem;
         overflow: hidden;
     }
@@ -163,6 +163,6 @@
 
     &:hover {
         background-color: $color-secondary-dark;
-        color: #fff;
+        color: $color-white;
     }
 }

@@ -6,7 +6,7 @@
     p {
         font-size: 1.4rem;
         font-weight: 400;
-        color: #fff;
+        color: $color-white;
         justify-self: center;
         align-self: center;
 
@@ -14,7 +14,7 @@
             color: #a8f8dd;
             
             &:hover {
-                color: #fff;
+                color: $color-white;
                 text-decoration: none;
             }
         }

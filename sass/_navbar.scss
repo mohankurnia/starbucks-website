@@ -44,7 +44,7 @@
 
     &__button {
         border: none;
-        background-color: #fff;
+        background-color: $color-white;
     }
 
     &__icon {
@@ -106,7 +106,7 @@
 
         &::before,
         &::after {
-            background-color: #fff;
+            background-color: $color-white;
             width: 3rem;
         }
 
@@ -127,10 +127,13 @@
         left: 0;
         z-index: 500;
         visibility: hidden;
-        -webkit-backdrop-filter: blur(2px);
-        backdrop-filter: blur(2px);
-        background-color: rgba(#000, .5);
         transition: all .2s; 
+
+        @supports (-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
+            -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+            background-color: rgba($color-black, .5);
+        }
     }
 
     &__background {
@@ -153,7 +156,7 @@
 
     &__link {
         text-decoration: none;
-        color: #fff;
+        color: $color-white;
         font-size: 1.6rem;
         font-weight: inherit;
         font-family: $font-primary;
