@@ -16,6 +16,12 @@ $color-white: #fff;
 $font-primary: 'Open Sans', sans-serif;
 $font-display: 'Oswald', sans-serif;
 
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;
+$bp-large: 62.5em;
+$bp-medium: 50em;
+$bp-small: 37.5em;
+
 *,
 *::before,
 *::after {
@@ -27,6 +33,10 @@ $font-display: 'Oswald', sans-serif;
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
 }
 
 body {

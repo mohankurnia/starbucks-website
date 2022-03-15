@@ -10,6 +10,10 @@
     position: relative;
     grid-template-rows: repeat(3, min-content);
     grid-template-columns: repeat(2, 1fr);
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: 1fr;
+    }
     
     &--1 {
         grid-row: 1 / 2;
@@ -20,6 +24,10 @@
 
         .gallery__content {
             padding: 5rem 16rem;
+
+            @media screen and (max-width: $bp-medium) {
+                padding: 5rem 10rem;
+            }
 
             .btn {
                 margin-top: 1rem;
@@ -32,6 +40,10 @@
 
         .gallery__content {
             height: 77rem;
+
+            @media screen and (max-width: $bp-medium) {
+                height: 40rem;
+            }
         }
     }
 
@@ -43,9 +55,17 @@
         background-repeat: no-repeat;
         background-position: 120% center;
 
+        @media screen and (max-width: $bp-large) {
+            background-position: 250% center;
+        }
+
         .gallery__content {
             height: 77rem;
             padding: 5rem 22rem;
+
+            @media screen and (max-width: $bp-large) {
+                padding: 5rem 15rem;
+            }
         }
     }
 
@@ -62,6 +82,10 @@
         grid-row-gap: 2rem;
         padding: 5rem 15rem;
         align-content: center;
+
+        @media screen and (max-width: $bp-medium) {
+            padding: 5rem 10rem;
+        }
     }
 
     &__quote,
@@ -83,6 +107,10 @@
         background-size: cover;
         min-height: 34.7rem;
         background-position: 50% 50%;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-row: 1 / -1;
+        }
     }
     
     &__img--2 {
@@ -91,6 +119,13 @@
         background-image: url(../img/starbucks-2.jpeg);
         background-size: cover;
         background-position: 70% 50%;
+        
+        @media only screen and (max-width: $bp-medium) {
+            grid-row: -1 / -1;
+            grid-column: 1 / 2;
+            min-height: 34.7rem; 
+            background-position: 70% 60%;   
+        }
     }
     
     &__img--3 {
@@ -99,6 +134,12 @@
         background-image: url(../img/starbucks-3.jpeg);
         background-size: cover;
         background-position: 50% 50%;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-row: 1 / -1;
+            min-height: 34.7rem; 
+            background-position: 70% 60%;   
+        }
     }
 
     &__img--4 {
@@ -108,6 +149,12 @@
         background-size: cover;
         min-height: 45.3rem;
         background-position: 50% 50%;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-row: -1 / -1;
+            grid-column: 1 / 2;
+            min-height: 34.7rem; 
+        }
     }
 
     &__img--5 {
@@ -116,14 +163,21 @@
         background-image: url(../img/starbucks-5.jpeg);
         background-size: cover;
         background-position: 50% 50%;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-row: 1 / -1;
+            grid-column: 1 / 2;
+            min-height: 34.7rem; 
+            background-position: 70% 60%;   
+        }
     }
 
-    &__img--6 {
-        background-image: url(../img/starbucks-6.jpeg);
-        background-size: cover;
-        background-position: 70% 50%;
-        height: 77rem;
-    }
+    // &__img--6 {
+    //     background-image: url(../img/starbucks-6.jpeg);
+    //     background-size: cover;
+    //     background-position: 70% 50%;
+    //     height: 77rem;
+    // }
 
     &__img--7 {
         height: 50rem;
@@ -131,6 +185,10 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        @media screen and (max-width: $bp-medium) {
+            height: 40rem;
+        }
     }
 
     &__img--logo {
@@ -140,6 +198,10 @@
         left: -8rem;
         z-index: -1;
         opacity: .2;
+
+        @media screen and (max-width: $bp-medium) {
+            width: 40rem;
+        }
     }
 }
 

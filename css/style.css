@@ -8,6 +8,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -163,6 +166,12 @@ body {
   grid-row-gap: 3rem; }
   .header > * {
     margin-left: 15rem; }
+    @media only screen and (max-width: 62.5em) {
+      .header > * {
+        margin-left: 10rem; } }
+    @media only screen and (max-width: 50em) {
+      .header > * {
+        margin-left: 0; } }
   .header__text {
     font-size: 1.6rem;
     line-height: 1.6; }
@@ -187,18 +196,27 @@ body {
   position: relative;
   grid-template-rows: repeat(3, min-content);
   grid-template-columns: repeat(2, 1fr); }
+  @media only screen and (max-width: 50em) {
+    .gallery {
+      grid-template-columns: 1fr; } }
   .gallery--1 {
     grid-row: 1 / 2; }
   .gallery--2 {
     grid-row: 2 / 3; }
     .gallery--2 .gallery__content {
       padding: 5rem 16rem; }
+      @media screen and (max-width: 50em) {
+        .gallery--2 .gallery__content {
+          padding: 5rem 10rem; } }
       .gallery--2 .gallery__content .btn {
         margin-top: 1rem; }
   .gallery--3 {
     grid-row: 3 / 4; }
     .gallery--3 .gallery__content {
       height: 77rem; }
+      @media screen and (max-width: 50em) {
+        .gallery--3 .gallery__content {
+          height: 40rem; } }
   .gallery--4 {
     grid-row: 4 / 5;
     background-color: #E8E9EE;
@@ -206,9 +224,15 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 120% center; }
+    @media screen and (max-width: 62.5em) {
+      .gallery--4 {
+        background-position: 250% center; } }
     .gallery--4 .gallery__content {
       height: 77rem;
       padding: 5rem 22rem; }
+      @media screen and (max-width: 62.5em) {
+        .gallery--4 .gallery__content {
+          padding: 5rem 15rem; } }
   .gallery--5 {
     grid-row: 5 / 6;
     background-color: #E8E9EE;
@@ -220,6 +244,9 @@ body {
     grid-row-gap: 2rem;
     padding: 5rem 15rem;
     align-content: center; }
+    @media screen and (max-width: 50em) {
+      .gallery__content {
+        padding: 5rem 10rem; } }
   .gallery__quote, .gallery__text {
     font-size: 1.6rem;
     font-family: "Open Sans", sans-serif;
@@ -234,18 +261,32 @@ body {
     background-size: cover;
     min-height: 34.7rem;
     background-position: 50% 50%; }
+    @media only screen and (max-width: 50em) {
+      .gallery__img--1 {
+        grid-row: 1 / -1; } }
   .gallery__img--2 {
     grid-row: 1 / -1;
     grid-column: 2 / -1;
     background-image: url(../img/starbucks-2.jpeg);
     background-size: cover;
     background-position: 70% 50%; }
+    @media only screen and (max-width: 50em) {
+      .gallery__img--2 {
+        grid-row: -1 / -1;
+        grid-column: 1 / 2;
+        min-height: 34.7rem;
+        background-position: 70% 60%; } }
   .gallery__img--3 {
     grid-row: 1 / -1;
     grid-column: 1 / 2;
     background-image: url(../img/starbucks-3.jpeg);
     background-size: cover;
     background-position: 50% 50%; }
+    @media only screen and (max-width: 50em) {
+      .gallery__img--3 {
+        grid-row: 1 / -1;
+        min-height: 34.7rem;
+        background-position: 70% 60%; } }
   .gallery__img--4 {
     grid-row: 2 / -1;
     grid-column: 2 / -1;
@@ -253,23 +294,32 @@ body {
     background-size: cover;
     min-height: 45.3rem;
     background-position: 50% 50%; }
+    @media only screen and (max-width: 50em) {
+      .gallery__img--4 {
+        grid-row: -1 / -1;
+        grid-column: 1 / 2;
+        min-height: 34.7rem; } }
   .gallery__img--5 {
     grid-row: 1 / -1;
     grid-column: 2 / -1;
     background-image: url(../img/starbucks-5.jpeg);
     background-size: cover;
     background-position: 50% 50%; }
-  .gallery__img--6 {
-    background-image: url(../img/starbucks-6.jpeg);
-    background-size: cover;
-    background-position: 70% 50%;
-    height: 77rem; }
+    @media only screen and (max-width: 50em) {
+      .gallery__img--5 {
+        grid-row: 1 / -1;
+        grid-column: 1 / 2;
+        min-height: 34.7rem;
+        background-position: 70% 60%; } }
   .gallery__img--7 {
     height: 50rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+    @media screen and (max-width: 50em) {
+      .gallery__img--7 {
+        height: 40rem; } }
   .gallery__img--logo {
     position: absolute;
     width: 50rem;
@@ -277,6 +327,9 @@ body {
     left: -8rem;
     z-index: -1;
     opacity: .2; }
+    @media screen and (max-width: 50em) {
+      .gallery__img--logo {
+        width: 40rem; } }
 
 .green-box {
   width: 16rem;
