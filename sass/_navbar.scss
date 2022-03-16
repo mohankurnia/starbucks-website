@@ -40,6 +40,14 @@
         &:focus {
             outline: none;
         }
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem;
+
+            &::-webkit-input-placeholder {
+                font-size: 1.8rem;
+            }
+        }
     }
 
     &__button {
@@ -77,6 +85,11 @@
             height: 2.4px;
             background-color: $color-grey-dark;
             display: inline-block;
+
+            @media only screen and (max-width: $bp-small) {
+                width: 2.4rem;
+                height: 1px;
+            }
         }
 
         &::before,
@@ -144,6 +157,14 @@
         background-color: $color-grey-dark;
         z-index: 1000;
         visibility: hidden;  
+
+        @media screen and (max-width: $bp-medium) {
+            width: 25vw;
+        }
+
+        @media screen and (max-width: $bp-small) {
+            width: 30vw;
+        }
     }
 
     &__item {

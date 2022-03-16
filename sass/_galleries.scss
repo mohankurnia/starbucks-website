@@ -59,12 +59,21 @@
             background-position: 250% center;
         }
 
+        @media screen and (max-width: $bp-medium) {
+            background-position: 250% bottom;
+        }
+
         .gallery__content {
             height: 77rem;
             padding: 5rem 22rem;
 
             @media screen and (max-width: $bp-large) {
                 padding: 5rem 15rem;
+            }
+
+            @media screen and (max-width: $bp-medium) {
+                padding: 5rem 10rem;
+                align-content: start;
             }
         }
     }
@@ -74,6 +83,10 @@
         background-color: $color-secondary-light;
         height: 40rem;
         overflow: hidden;
+
+        @media screen and (max-width: $bp-small) {
+            height: 30rem;
+        }
     }
 
     &__content {
@@ -189,6 +202,10 @@
         @media screen and (max-width: $bp-medium) {
             height: 40rem;
         }
+
+        @media screen and (max-width: $bp-small) {
+            height: 30rem;
+        }
     }
 
     &__img--logo {
@@ -226,5 +243,9 @@
     &:hover {
         background-color: $color-secondary-dark;
         color: $color-white;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        border: 1px solid $color-secondary-dark;
     }
 }

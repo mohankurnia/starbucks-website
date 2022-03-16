@@ -38,6 +38,10 @@
             max-width: 100%;
             border: 5px solid $color-primary;
             border-radius: 100%;
+
+            @media only screen and (max-width: $bp-small) {
+                border: 3px solid $color-primary;
+            }
         }
     }
 }
