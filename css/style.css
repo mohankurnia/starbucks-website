@@ -184,7 +184,7 @@ body {
   grid-row-gap: 3rem; }
   .header > * {
     margin-left: 15rem; }
-    @media only screen and (max-width: 62.5em) {
+    @media only screen and (max-width: 64em) {
       .header > * {
         margin-left: 10rem; } }
     @media only screen and (max-width: 50em) {
@@ -245,7 +245,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 120% center; }
-    @media screen and (max-width: 62.5em) {
+    @media screen and (max-width: 64em) {
       .gallery--4 {
         background-position: 250% center; } }
     @media screen and (max-width: 50em) {
@@ -254,7 +254,7 @@ body {
     .gallery--4 .gallery__content {
       height: 77rem;
       padding: 5rem 22rem; }
-      @media screen and (max-width: 62.5em) {
+      @media screen and (max-width: 64em) {
         .gallery--4 .gallery__content {
           padding: 5rem 15rem; } }
       @media screen and (max-width: 50em) {
