@@ -19,6 +19,10 @@
 
     &__logo {
         height: 6.4rem;
+
+        @media only screen and (max-width: $bp-smallest) {
+            height: 5.4rem;
+        }
     }
 
     &__form {
@@ -37,15 +41,19 @@
         border-radius: 0;
         margin-right: -3.25rem;
 
+        @media only screen and (max-width: $bp-smallest) {
+            width: 16rem;
+        }
+
         &:focus {
             outline: none;
         }
 
         @media only screen and (max-width: $bp-smallest) {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
 
             &::-webkit-input-placeholder {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
         }
     }
@@ -163,7 +171,7 @@
         }
 
         @media screen and (max-width: $bp-smallest) {
-            width: 30vw;
+            width: 40vw;
         }
     }
 

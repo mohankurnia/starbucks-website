@@ -11,12 +11,6 @@ html {
   @media only screen and (max-width: 75em) {
     html {
       font-size: 50%; } }
-  @media only screen and (max-width: 30em) {
-    html {
-      font-size: 45%; } }
-  @media only screen and (max-width: 25em) {
-    html {
-      font-size: 40%; } }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -36,6 +30,9 @@ body {
 .heading-1 {
   font-size: 9rem;
   line-height: 1.1; }
+  @media only screen and (max-width: 30em) {
+    .heading-1 {
+      font-size: 8rem; } }
   @media only screen and (max-width: 25em) {
     .heading-1 {
       font-size: 6rem; } }
@@ -59,6 +56,9 @@ body {
     align-self: center; }
   .navbar__logo {
     height: 6.4rem; }
+    @media only screen and (max-width: 25em) {
+      .navbar__logo {
+        height: 5.4rem; } }
   .navbar__form {
     flex: 0 0 0 40%;
     display: flex;
@@ -72,13 +72,16 @@ body {
     padding: .7rem 2rem;
     border-radius: 0;
     margin-right: -3.25rem; }
+    @media only screen and (max-width: 25em) {
+      .navbar__input {
+        width: 16rem; } }
     .navbar__input:focus {
       outline: none; }
     @media only screen and (max-width: 25em) {
       .navbar__input {
-        font-size: 1.8rem; }
+        font-size: 1.5rem; }
         .navbar__input::-webkit-input-placeholder {
-          font-size: 1.8rem; } }
+          font-size: 1.5rem; } }
   .navbar__button {
     border: none;
     background-color: #fff; }
@@ -160,7 +163,7 @@ body {
         width: 25vw; } }
     @media screen and (max-width: 25em) {
       .navbar__background {
-        width: 30vw; } }
+        width: 40vw; } }
   .navbar__item {
     display: flex;
     justify-content: center;
@@ -238,6 +241,9 @@ body {
       @media screen and (max-width: 50em) {
         .gallery--2 .gallery__content {
           padding: 5rem 10rem; } }
+      @media only screen and (max-width: 25em) {
+        .gallery--2 .gallery__content {
+          padding: 5rem 5rem; } }
       .gallery--2 .gallery__content .btn {
         margin-top: 1rem; }
   .gallery--3 {
@@ -273,6 +279,9 @@ body {
         .gallery--4 .gallery__content {
           padding: 5rem 10rem;
           align-content: start; } }
+      @media only screen and (max-width: 25em) {
+        .gallery--4 .gallery__content {
+          padding: 5rem 5rem; } }
   .gallery--5 {
     grid-row: 5 / 6;
     background-color: #E8E9EE;
@@ -290,6 +299,9 @@ body {
     @media screen and (max-width: 50em) {
       .gallery__content {
         padding: 5rem 10rem; } }
+    @media only screen and (max-width: 25em) {
+      .gallery__content {
+        padding: 5rem 5rem; } }
   .gallery__quote, .gallery__text {
     font-size: 1.6rem;
     font-family: "Open Sans", sans-serif;
