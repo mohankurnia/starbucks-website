@@ -17,11 +17,11 @@ $font-primary: 'Open Sans', sans-serif;
 $font-display: 'Oswald', sans-serif;
 
 // RESPONSIVE BREAKPOINTS
-$bp-largest: 75em;
-$bp-large: 64em;
-$bp-medium: 50em;
-$bp-small: 30em;
-$bp-smallest: 25em;
+$bp-largest: 75em;   // 1200px
+$bp-large: 64em;     // 1024px
+$bp-medium: 50em;    // 800px
+$bp-small: 30em;     // 480px
+$bp-smallest: 25em;  // 400px
 
 *,
 *::before,
