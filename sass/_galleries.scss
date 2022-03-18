@@ -44,6 +44,10 @@
             @media screen and (max-width: $bp-medium) {
                 height: 40rem;
             }
+
+            @media screen and (max-width: $bp-smallest) {
+                height: 50rem;
+            }
         }
     }
 
@@ -84,7 +88,7 @@
         height: 40rem;
         overflow: hidden;
 
-        @media screen and (max-width: $bp-small) {
+        @media screen and (max-width: $bp-smallest) {
             height: 30rem;
         }
     }
@@ -203,7 +207,7 @@
             height: 40rem;
         }
 
-        @media screen and (max-width: $bp-small) {
+        @media screen and (max-width: $bp-smallest) {
             height: 30rem;
         }
     }
@@ -245,7 +249,7 @@
         color: $color-white;
     }
 
-    @media only screen and (max-width: $bp-small) {
+    @media only screen and (max-width: $bp-smallest) {
         border: 1px solid $color-secondary-dark;
     }
 }

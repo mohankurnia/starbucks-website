@@ -41,7 +41,7 @@
             outline: none;
         }
 
-        @media only screen and (max-width: $bp-small) {
+        @media only screen and (max-width: $bp-smallest) {
             font-size: 1.8rem;
 
             &::-webkit-input-placeholder {
@@ -86,7 +86,7 @@
             background-color: $color-grey-dark;
             display: inline-block;
 
-            @media only screen and (max-width: $bp-small) {
+            @media only screen and (max-width: $bp-smallest) {
                 width: 2.4rem;
                 height: 1px;
             }
@@ -162,7 +162,7 @@
             width: 25vw;
         }
 
-        @media screen and (max-width: $bp-small) {
+        @media screen and (max-width: $bp-smallest) {
             width: 30vw;
         }
     }

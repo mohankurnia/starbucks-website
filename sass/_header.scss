@@ -5,6 +5,10 @@
     background-position: 50% 30%;
     padding: 8rem;
 
+    @media only screen and (max-width: $bp-smallest) {
+        padding: 3rem;
+    }
+
     display: grid;
     grid-template-rows: 1fr min-content minmax(6rem, min-content);
     grid-template-columns: minmax(min-content, max-content);
@@ -39,7 +43,7 @@
             border: 5px solid $color-primary;
             border-radius: 100%;
 
-            @media only screen and (max-width: $bp-small) {
+            @media only screen and (max-width: $bp-smallest) {
                 border: 3px solid $color-primary;
             }
         }

@@ -20,7 +20,8 @@ $font-display: 'Oswald', sans-serif;
 $bp-largest: 75em;
 $bp-large: 64em;
 $bp-medium: 50em;
-$bp-small: 25em;
+$bp-small: 30em;
+$bp-smallest: 25em;
 
 *,
 *::before,
@@ -39,7 +40,11 @@ html {
     }
 
     @media only screen and (max-width: $bp-small) {
-        font-size: 30%;
+        font-size: 45%;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 40%;
     }
 }
 

@@ -11,9 +11,12 @@ html {
   @media only screen and (max-width: 75em) {
     html {
       font-size: 50%; } }
+  @media only screen and (max-width: 30em) {
+    html {
+      font-size: 45%; } }
   @media only screen and (max-width: 25em) {
     html {
-      font-size: 30%; } }
+      font-size: 40%; } }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -182,6 +185,9 @@ body {
   grid-template-rows: 1fr min-content minmax(6rem, min-content);
   grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 3rem; }
+  @media only screen and (max-width: 25em) {
+    .header {
+      padding: 3rem; } }
   .header > * {
     margin-left: 15rem; }
     @media only screen and (max-width: 64em) {
@@ -238,6 +244,9 @@ body {
       @media screen and (max-width: 50em) {
         .gallery--3 .gallery__content {
           height: 40rem; } }
+      @media screen and (max-width: 25em) {
+        .gallery--3 .gallery__content {
+          height: 50rem; } }
   .gallery--4 {
     grid-row: 4 / 5;
     background-color: #E8E9EE;
